@@ -3,7 +3,7 @@
 @import url("/assets/css/global.css");
 
 /*Definindo a cor de fundo do body*/
-body{
+body {
   background-color: var(--primary-color);
 }
 /* ::before cria um elemento virtalque fica antes do conteúdo do body, no caso, precisa das propriedade para aparecer*/
@@ -19,12 +19,13 @@ body::before {
   position: absolute;
   opacity: 0.2;
 }
+/*A medida rem está ligada ao font-size definida: 16px*/
 
 .s-menu {
   padding: 1rem 0;
   width: 100%;
   text-align: center;
-  position: relative;/*Faz o menu vir pra frente*/
+  position: relative; /*Faz o menu vir pra frente para se tornar clicavel, tinha deixado de ser depois do position: absolute; do body::before acima*/
 }
 
 .s-menu__item {
@@ -40,10 +41,10 @@ body::before {
 }
 /*Estilizar o container que tem como filhos os cards*/
 .s-container {
-  position: relative;/*para dicar pra frente*/
-  display: flex;/*para alinhar */
-  align-items: center;
-  justify-content: space-evenly;
+  position: relative; /*para dicar pra frente*/
+  display: flex; /*para alinhar */
+  align-items: center; /*Alinha verticalmente*/
+  justify-content: space-evenly;/*Alinha Horizontalmente*/
 }
 /*estilizar os cards que esão dentro do container*/
 .s-card {
@@ -68,12 +69,11 @@ body::before {
   position: relative;
 }
 
-.s-card__title{
+.s-card__title {
   font-size: 2rem;
   text-transform: uppercase;
   text-align: center;
   position: absolute;
   width: 100%;
   bottom: 0%;
-
 }
