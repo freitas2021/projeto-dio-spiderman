@@ -1,0 +1,79 @@
+/*Linkando os outros arquivos CSS*/
+@import url("/assets/css/reset.css");
+@import url("/assets/css/global.css");
+
+/*Definindo a cor de fundo do body*/
+body{
+  background-color: var(--primary-color);
+}
+/* ::before cria um elemento virtalque fica antes do conteúdo do body, no caso, precisa das propriedade para aparecer*/
+
+body::before {
+  content: "";
+  background-image: url(../images/spider-man-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.2;
+}
+
+.s-menu {
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
+  position: relative;/*Faz o menu vir pra frente*/
+}
+
+.s-menu__item {
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0 1.25rem;
+}
+
+.s-menu__icon {
+  width: 2.5rem;
+  margin: 0 1.25rem;
+  vertical-align: middle;
+}
+/*Estilizar o container que tem como filhos os cards*/
+.s-container {
+  position: relative;/*para dicar pra frente*/
+  display: flex;/*para alinhar */
+  align-items: center;
+  justify-content: space-evenly;
+}
+/*estilizar os cards que esão dentro do container*/
+.s-card {
+  border: 0.5rem solid white;
+  width: calc(100% / 3 - 8%);
+  height: 70vh;
+  position: relative;
+}
+
+.s-card__background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 1;
+}
+
+.s-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+}
+
+.s-card__title{
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0%;
+
+}

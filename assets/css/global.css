@@ -1,0 +1,11 @@
+/*Importando a fonte do Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/*Criando a variáel da cor primaria*/
+:root {
+  --primary-color: #B9001F;
+}
+/*definindo a font importada no body*/
+body {
+  font-family: 'Poppins', sans-serif;
+}
